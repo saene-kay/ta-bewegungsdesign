@@ -336,7 +336,9 @@
     if (!d || typeof d !== 'object' || !('ta' in d)) return;
 
     if (EMBED) {
-      if (e.source === window.parent && d.ta === 'goto') show(d.slide - 1, d.step || 0);
+      if (e.source !== window.parent) return;
+      if (d.ta === 'goto') show(d.slide - 1, d.step || 0);
+      if (d.ta === 'ping') window.parent.postMessage({ ta: 'embed-ready' }, '*');
       return;
     }
 
@@ -492,7 +494,11 @@
     window.addEventListener('beforeprint', enterPrintLayout);
     window.addEventListener('afterprint', leavePrintLayout);
 
-    if (EMBED) return;
+    if (EMBED) {
+      // Der Referentenansicht melden, dass diese Vorschau Befehle annehmen kann.
+      if (window.parent !== window) window.parent.postMessage({ ta: 'embed-ready' }, '*');
+      return;
+    }
     window.addEventListener('keydown', onKey);
     window.addEventListener('mousemove', poke);
     viewport.addEventListener('click', (e) => {

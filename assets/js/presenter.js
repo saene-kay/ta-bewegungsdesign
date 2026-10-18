@@ -167,9 +167,18 @@
   }
 
   window.addEventListener('message', (e) => {
-    if (e.source !== deck) return;
     const d = e.data;
-    if (!d || d.ta !== 'state') return;
+    if (!d || typeof d !== 'object') return;
+
+    // Vorschau meldet sich bereit (verlässlicher als das load-Event, das vor diesem Skript feuern kann)
+    if (d.ta === 'embed-ready') {
+      if (e.source === ui.now.contentWindow) framesReady.now = true;
+      if (e.source === ui.next.contentWindow) framesReady.next = true;
+      updatePreviews();
+      return;
+    }
+
+    if (e.source !== deck || d.ta !== 'state') return;
     const moved = state && (state.slide !== d.slide || state.step !== d.step);
     state = d;
     ui.link.textContent = 'verbunden';
@@ -209,6 +218,8 @@
   } else {
     send('hello');
   }
+  // Falls die Vorschauen schon vor diesem Skript geladen waren: nachfragen.
+  [ui.now, ui.next].forEach((f) => { if (f.contentWindow) f.contentWindow.postMessage({ ta: 'ping' }, '*'); });
   setInterval(tick, 250);
   tick();
 })();
