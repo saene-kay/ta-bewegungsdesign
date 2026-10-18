@@ -1,0 +1,334 @@
+/* ==========================================================================
+   Folien-Layouts und Bausteine
+   ========================================================================== */
+
+/* --- Ich-Zustände (Kreise) --- */
+.ego {
+  --c: var(--navy);
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  background: var(--c);
+  color: #fff;
+  font: 800 34px/1 var(--font-sans);
+  letter-spacing: .5px;
+}
+.ego--el { --c: var(--el); }
+.ego--er { --c: var(--er); }
+.ego--k { --c: var(--k); color: var(--navy); }
+.ego--xl { width: 156px; height: 156px; font-size: 48px; }
+.ego.is-sending { box-shadow: 0 0 0 14px color-mix(in srgb, var(--c) 28%, transparent); }
+
+.key--el { color: var(--el-ink); }
+.key--er { color: var(--er); }
+.key--k { color: var(--k-ink); }
+
+/* Leitmotiv «kippen» */
+.kipp { display: inline-block; transform-origin: 10% 90%; }
+
+/* ---------------------------------------------------------------- 1 Titel */
+.s-title { justify-content: space-between; gap: 32px; padding: 112px 128px; }
+.s-title .quote { position: relative; padding-left: 56px; }
+.s-title .quote-bar {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 8px;
+  border-radius: 4px;
+  background: var(--gold);
+}
+.s-title blockquote {
+  max-width: 1480px;
+  font: 400 56px/1.3 var(--font-serif);
+  color: var(--cream);
+}
+.s-title figcaption { margin-top: 20px; font-size: 40px; color: var(--mist); }
+.s-title h1 { font: 700 104px/1.05 var(--font-serif); color: var(--cream); }
+.s-title .subtitle { margin-top: 12px; font-size: 44px; color: var(--mist); }
+.s-title .byline { font-size: 32px; color: var(--mist); }
+
+/* --------------------------------------------------------------- 2 Szene */
+.s-scene .chat { display: flex; flex-direction: column; gap: 36px; margin-top: 28px; }
+.msg { display: flex; flex-direction: column; gap: 12px; }
+.msg--left { align-items: flex-start; }
+.msg--right { align-items: flex-end; position: relative; }
+.msg-who { font-size: 28px; font-weight: 800; }
+.who--er { color: var(--er); }
+.who--el { color: var(--el-ink); }
+.bubble {
+  max-width: 1200px;
+  padding: 24px 40px;
+  border-radius: 32px;
+  color: #fff;
+  font-size: 46px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.bubble--er { background: var(--er); border-bottom-left-radius: 8px; transform-origin: left bottom; }
+.bubble--el { background: var(--el); border-bottom-right-radius: 8px; transform-origin: right bottom; }
+.typing {
+  position: absolute;
+  right: 0;
+  bottom: 18px;
+  display: inline-flex;
+  gap: 12px;
+  padding: 26px 34px;
+  border-radius: 32px;
+  border-bottom-right-radius: 8px;
+  background: #e5dfd3;
+  opacity: 0;
+}
+.typing i {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--navy-2);
+  animation: ta-typing 900ms ease-in-out infinite;
+}
+.typing i:nth-child(2) { animation-delay: 150ms; }
+.typing i:nth-child(3) { animation-delay: 300ms; }
+@keyframes ta-typing { 0%, 60%, 100% { transform: translateY(0); opacity: .45; } 30% { transform: translateY(-10px); opacity: 1; } }
+
+.prompt {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 16px;
+  padding: 20px 36px;
+  border-radius: 999px;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 36px;
+  font-weight: 800;
+}
+.prompt .thumb { width: 48px; height: 48px; flex: none; transform-origin: 40% 80%; }
+
+/* ----------------------------------------------------------------- 3 ARA */
+.s-ara .ara { display: grid; grid-template-columns: 1fr 1fr; gap: 112px; margin-top: 48px; align-items: start; }
+.ara-block + .ara-block { margin-top: 48px; }
+.kicker { font-size: 32px; font-weight: 800; color: var(--el-ink); margin-bottom: 8px; }
+.ara-block p { color: var(--navy-2); line-height: 1.35; }
+.agenda { list-style: none; padding: 0; }
+.agenda li { position: relative; display: flex; align-items: baseline; gap: 28px; padding: 30px 0; }
+.agenda li b { font: 700 56px/1 var(--font-serif); color: var(--el-ink); }
+.agenda li span[data-morph] { font-size: 42px; font-weight: 800; color: var(--navy); }
+.agenda-rule {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--rule);
+}
+.agenda-rule--end { top: auto; bottom: 0; }
+
+/* -------------------------------------------------------- 4 Ich-Zustände */
+.s-states .states { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; margin-top: 56px; }
+.state { display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; }
+.state h3 { margin-top: 24px; font: 700 50px/1.2 var(--font-serif); }
+.state-key { font-size: 38px; font-weight: 800; }
+.state-sub { font-size: 34px; color: var(--navy-2); }
+.formula {
+  margin-top: 64px;
+  padding: 30px 44px;
+  border-radius: 16px;
+  background: var(--navy);
+  color: var(--cream);
+  font-size: 40px;
+  font-weight: 600;
+}
+.formula b { color: var(--gold); font-weight: 800; }
+
+/* ----------------------------------------------- 5–7 Transaktionsdiagramme */
+.s-tx .tx { display: grid; grid-template-columns: 640px 1fr; gap: 96px; margin-top: 12px; align-items: start; }
+.diagram { position: relative; width: 620px; height: 540px; transform-origin: 50% 88%; }
+.diagram .who {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  font-size: 30px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.diagram .who[data-side="L"] { left: 110px; }
+.diagram .who[data-side="R"] { left: 510px; }
+.diagram .ego { position: absolute; }
+.diagram [data-node^="L."] { left: 54px; }
+.diagram [data-node^="R."] { left: 454px; }
+.diagram [data-node$=".EL"] { top: 84px; }
+.diagram [data-node$=".ER"] { top: 244px; }
+.diagram [data-node$=".K"] { top: 404px; }
+.diagram .arrows { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.s-crossed .spark { left: 310px; top: 300px; }
+
+.arrow { color: var(--navy); }
+.arrow--antwort { color: var(--el-ink); }
+.arrow .shaft { fill: none; stroke: currentColor; stroke-width: 7; stroke-linecap: round; }
+.arrow .shaft.is-dashed { stroke-linecap: butt; }
+.arrow .head { fill: currentColor; }
+.arrow .flow { fill: none; stroke: rgba(255, 255, 255, .95); stroke-width: 3.5; stroke-linecap: round; stroke-dasharray: 2 26; }
+
+.legend { display: flex; gap: 40px; margin-top: 20px; font-size: 30px; font-weight: 800; }
+.lg { display: inline-flex; align-items: center; gap: 14px; }
+.lg::before { content: ""; width: 56px; height: 7px; border-radius: 4px; background: currentColor; }
+.lg--reiz, .lg--said { color: var(--navy); }
+.lg--antwort { color: var(--el-ink); }
+.lg--meant { color: var(--el-ink); }
+.lg--meant::before { border-radius: 0; background: repeating-linear-gradient(90deg, currentColor 0 14px, transparent 14px 24px); }
+
+.tx-right { display: flex; flex-direction: column; gap: 28px; padding-top: 48px; }
+.say {
+  padding: 22px 32px;
+  border-left: 8px solid var(--navy);
+  border-radius: 0 14px 14px 0;
+  background: #fbf9f4;
+  box-shadow: 0 10px 30px -18px rgba(27, 42, 58, .35);
+  font-size: 38px;
+  line-height: 1.35;
+  transform-origin: left center;
+}
+.say--er { border-left-color: var(--er); }
+.say--k { border-left-color: var(--k); }
+.say--meant { border-left: 8px dashed var(--el-ink); color: var(--el-ink); }
+.say b { font-weight: 800; }
+.reaction { padding-left: 40px; font-size: 32px; font-weight: 700; color: var(--k-ink); }
+.rule {
+  padding: 28px 34px;
+  border-radius: 14px;
+  background: var(--navy);
+  color: var(--cream);
+  font-size: 38px;
+  line-height: 1.35;
+}
+.rule b { color: var(--gold); font-weight: 800; }
+
+/* ------------------------------------------------------ 8 Wie antworte ich? */
+.s-answer .incoming { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+.incoming-quote { font-size: 46px; font-style: italic; color: var(--navy-2); }
+.tag { padding: 10px 24px; border-radius: 999px; font-size: 30px; font-weight: 800; }
+.tag--k { background: var(--k); color: var(--navy); }
+
+.answers { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; margin-top: 24px; }
+.cue-chip {
+  position: absolute;
+  left: 50%;
+  top: 120px;
+  z-index: 2;
+  translate: -50% 0;
+  padding: 26px 48px;
+  border-radius: 999px;
+  border: 4px dashed var(--navy-2);
+  background: var(--cream);
+  font: 700 52px/1.2 var(--font-serif);
+  white-space: nowrap;
+}
+.answer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 380px;
+  padding: 32px 38px;
+  border-top: 12px solid var(--navy);
+  border-radius: 16px;
+  background: #fbf9f4;
+  box-shadow: 0 16px 40px -24px rgba(27, 42, 58, .45);
+}
+.answer--el { border-top-color: var(--el); }
+.answer--k { border-top-color: var(--k); }
+.answer--er { border-top-color: var(--er); background: var(--er-tint); }
+.answer-from { font-size: 30px; font-weight: 800; }
+.answer--el .answer-from { color: var(--el-ink); }
+.answer--k .answer-from { color: var(--k-ink); }
+.answer--er .answer-from { color: var(--er); }
+.answer-text { flex: 1; font-size: 42px; line-height: 1.3; }
+.answer-result { font-size: 34px; font-weight: 800; }
+.answers-focus { display: none; }
+
+/* ----------------------------------------------------------- 9 Egogramm */
+.s-ego { gap: 24px; padding-bottom: 150px; }
+.ego-legend { display: flex; gap: 48px; }
+.lg-item { display: inline-flex; align-items: center; gap: 16px; }
+.sw { width: 40px; height: 40px; }
+.sw--now, .bar--now { background: var(--navy); }
+.sw--wish, .bar--wish { background: var(--mist-2); }
+
+.chart {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+  height: 320px;
+  margin-top: 12px;
+  border-bottom: 4px solid var(--navy);
+}
+.bar-group { position: relative; flex: 1; display: flex; justify-content: center; align-items: flex-end; gap: 12px; height: 100%; }
+.bar { display: block; width: 110px; height: calc(var(--v) * 4px); }
+.delta {
+  position: absolute;
+  left: 50%;
+  bottom: calc(var(--v) * 4px + 14px);
+  translate: -50% 0;
+  padding: 4px 16px;
+  border-radius: 999px;
+  background: var(--el-ink);
+  color: #fff;
+  font-size: 32px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.avg { position: absolute; left: 0; right: 0; bottom: 200px; z-index: 1; }
+.avg-line { position: absolute; left: 0; right: 0; height: 4px; background: var(--el-ink); }
+.avg-label {
+  position: absolute;
+  right: 0;
+  bottom: 12px;
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--el-ink);
+}
+.chart-labels { display: flex; gap: 24px; font-weight: 700; text-align: center; }
+.chart-labels span { flex: 1; }
+.takeaway { font-size: 44px; font-weight: 800; }
+.study { color: var(--navy-2); line-height: 1.3; }
+.study [data-anim="marker"] { --marker: color-mix(in srgb, var(--el-ink) 70%, transparent); font-weight: 800; color: var(--navy); }
+
+/* ------------------------------------------------------------ 10 Abschluss */
+.s-close { justify-content: space-between; gap: 28px; padding: 112px 128px 96px; }
+.summary { display: flex; flex-wrap: wrap; gap: 20px 56px; color: var(--gold); font-size: 34px; font-weight: 800; }
+.sum-item { display: inline-flex; align-items: center; gap: 16px; }
+.sum-item svg { width: 72px; height: 44px; fill: none; stroke: currentColor; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+.sum-item svg .dash { stroke-dasharray: 8 7; stroke-linecap: butt; }
+.essence { max-width: 1560px; font: 700 80px/1.15 var(--font-serif); color: var(--cream); }
+.appeal { max-width: 1400px; font-size: 44px; color: var(--mist); }
+.closing { display: flex; align-items: flex-end; justify-content: space-between; gap: 48px; }
+.questions { font: 700 96px/1 var(--font-serif); color: var(--gold); }
+.fan { position: relative; width: 340px; height: 200px; margin-right: auto; margin-left: 80px; }
+.mini-card {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  display: grid;
+  place-items: center;
+  width: 120px;
+  height: 172px;
+  margin-left: -60px;
+  border-radius: 14px;
+  color: #fff;
+  font: 800 44px/1 var(--font-sans);
+  box-shadow: 0 18px 30px -12px rgba(0, 0, 0, .5);
+  transform-origin: 50% 140%;
+}
+.mini-card--el { background: var(--el); }
+.mini-card--er { background: var(--er); }
+.mini-card--k { background: var(--k); color: var(--navy); }
+.s-close .byline { font-size: 32px; color: var(--mist); }
+
+/* -------------------------------------------------------------- 11 Quellen */
+.refs { margin: 16px 0 0; padding: 0; list-style: none; font-size: 27px; line-height: 1.4; color: var(--navy-2); }
+.refs li { padding-left: 48px; text-indent: -48px; margin-bottom: 14px; overflow-wrap: anywhere; }

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Referentenansicht – Transaktionsanalyse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&amp;family=Nunito+Sans:ital,wght@0,400..800;1,400..800&amp;display=swap">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/presenter.css">
+</head>
+<body>
+<div class="p-shell">
+  <header class="p-head">
+    <div>
+      <p class="p-kicker" id="p-position">Folie – / –</p>
+      <h1 class="p-title" id="p-title">Warte auf die Präsentation …</h1>
+    </div>
+    <div class="p-steps" id="p-steps" aria-label="Schritte"></div>
+  </header>
+
+  <section class="p-previews">
+    <figure class="p-preview">
+      <figcaption>Jetzt</figcaption>
+      <div class="p-frame"><iframe id="p-now" title="Aktueller Schritt" src="index.html?embed" tabindex="-1"></iframe></div>
+      <p class="p-cue" id="p-cue-now"></p>
+    </figure>
+    <figure class="p-preview p-preview--next">
+      <figcaption>Nächster Klick</figcaption>
+      <div class="p-frame"><iframe id="p-next" title="Nächster Schritt" src="index.html?embed" tabindex="-1"></iframe></div>
+      <p class="p-cue" id="p-cue-next"></p>
+    </figure>
+  </section>
+
+  <section class="p-time" aria-label="Zeit">
+    <div class="p-clock">
+      <span class="p-elapsed" id="p-elapsed">0:00</span>
+      <span class="p-status" id="p-status">bereit</span>
+    </div>
+    <div class="p-plan">
+      <p class="p-plan-text" id="p-plan">Plan: –</p>
+      <div class="p-timeline" id="p-timeline">
+        <div class="p-segments" id="p-segments"></div>
+        <span class="p-mark p-mark--target" style="left:90%" title="Ziel 9:00"></span>
+        <span class="p-mark p-mark--limit" style="left:100%" title="Limit 10:00"></span>
+        <span class="p-playhead" id="p-playhead"></span>
+      </div>
+    </div>
+    <div class="p-buttons">
+      <button type="button" id="p-toggle">Start</button>
+      <button type="button" id="p-reset">Zurücksetzen</button>
+    </div>
+  </section>
+
+  <section class="p-notes" aria-label="Notizen">
+    <div class="p-notes-body" id="p-notes"></div>
+  </section>
+
+  <footer class="p-foot">
+    <span><kbd>→</kbd> weiter · <kbd>←</kbd> zurück · <kbd>T</kbd> Timer · <kbd>R</kbd> Reset · <kbd>B</kbd> schwarz · <kbd>+</kbd>/<kbd>−</kbd> Schrift</span>
+    <span id="p-link">nicht verbunden</span>
+  </footer>
+</div>
+<script src="assets/js/presenter.js"></script>
+</body>
+</html>

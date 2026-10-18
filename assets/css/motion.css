@@ -1,0 +1,173 @@
+/* ==========================================================================
+   Bewegungs-Vokabular
+   ZUSTAND  – data-anim / data-mod: per CSS-Transition, vor- und rückwärts.
+   AKZENT   – data-fx: einmalige WAAPI-Animation, nur beim Vorwärtsgehen (motion.js).
+   Die Engine setzt .is-on bzw. die Mod-Klassen; hier steht nur, wie es aussieht.
+   ========================================================================== */
+
+[data-anim], [data-mod] {
+  transition-property: opacity, transform, clip-path, filter, box-shadow, background-size;
+  transition-duration: var(--t, var(--dur-m));
+  transition-timing-function: var(--e, var(--ease-out));
+}
+/* Verzögerung nur beim Erscheinen; Ausblenden geschieht sofort und gleichzeitig */
+[data-anim].is-on {
+  transition-delay: calc(var(--d, 0ms) + var(--i, 0) * var(--stagger));
+}
+
+/* --- fade: nur Deckkraft --- */
+[data-anim="fade"]:not(.is-on) { opacity: 0; }
+
+/* --- rise: von unten einschweben (Standard für Text) --- */
+[data-anim="rise"]:not(.is-on) { opacity: 0; transform: translateY(32px); }
+
+/* --- from-left / from-right: Sprecher-Richtung (Chat, Dialog) --- */
+[data-anim="from-left"]:not(.is-on) { opacity: 0; transform: translateX(-56px); }
+[data-anim="from-right"]:not(.is-on) { opacity: 0; transform: translateX(56px); }
+
+/* --- pop: Ich-Zustände, Bubbles, Chips --- */
+[data-anim="pop"] { --t: var(--dur-l); --e: var(--ease-spring); }
+[data-anim="pop"]:not(.is-on) { opacity: 0; transform: scale(.55); }
+
+/* --- stamp: Etikett wird «aufgestempelt» --- */
+[data-anim="stamp"] { --t: var(--dur-l); --e: var(--ease-spring); }
+[data-anim="stamp"]:not(.is-on) { opacity: 0; transform: scale(1.5) rotate(-8deg); }
+
+/* --- flip: Karte wird umgedreht (Echo der physischen Karten) --- */
+[data-anim="flip"] { --t: var(--dur-l); backface-visibility: hidden; }
+[data-anim="flip"]:not(.is-on) { opacity: 0; transform: perspective(1600px) rotateY(75deg) translateX(40px); }
+
+/* --- wipe: von links aufdecken --- */
+[data-anim="wipe"] { --t: var(--dur-l); --e: var(--ease-in-out); }
+[data-anim="wipe"]:not(.is-on) { clip-path: inset(0 100% 0 0 round 16px); }
+[data-anim="wipe"].is-on { clip-path: inset(0 0 0 0 round 16px); }
+
+/* --- wipe-down: von oben aufdecken («darunter liegt …») --- */
+[data-anim="wipe-down"] { --t: var(--dur-l); --e: var(--ease-in-out); }
+[data-anim="wipe-down"]:not(.is-on) { clip-path: inset(0 0 100% 0); }
+[data-anim="wipe-down"].is-on { clip-path: inset(0 0 0 0); }
+
+/* --- line-x / line-y: Linien ziehen sich auf --- */
+[data-anim="line-x"] { --t: var(--dur-l); --e: var(--ease-in-out); transform-origin: left center; }
+[data-anim="line-x"]:not(.is-on) { transform: scaleX(0); }
+[data-anim="line-y"] { --t: var(--dur-l); --e: var(--ease-in-out); transform-origin: center top; }
+[data-anim="line-y"]:not(.is-on) { transform: scaleY(0); }
+
+/* --- grow: Balken wachsen vom Boden --- */
+[data-anim="grow"] { --t: var(--dur-l); --e: var(--ease-out); transform-origin: center bottom; }
+[data-anim="grow"]:not(.is-on) { transform: scaleY(0); }
+
+/* --- marker: Text bleibt stehen, eine Unterstreichung fährt darunter --- */
+[data-anim="marker"] {
+  --t: var(--dur-l);
+  --e: var(--ease-in-out);
+  --marker: var(--gold);
+  background-image: linear-gradient(var(--marker), var(--marker));
+  background-repeat: no-repeat;
+  background-position: left 0 bottom 2px;
+  background-size: 0% 6px;
+  padding-bottom: 4px;
+}
+[data-anim="marker"].is-on { background-size: 100% 6px; }
+
+/* --- fan: Karten fächern auf --- */
+[data-anim="fan"] { --t: var(--dur-l); --e: var(--ease-spring); }
+[data-anim="fan"]:not(.is-on) { opacity: 0; transform: translateY(60px) rotate(0deg); }
+[data-anim="fan"].is-on { transform: rotate(var(--r, 0deg)); }
+
+/* --- draw: SVG-Pfeil zeichnet sich (Aufbau in diagram.js) --- */
+[data-anim="draw"] { transition: none; }
+.arrow .shaft, .arrow .mask-path {
+  stroke-dasharray: 1 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset var(--dur-draw) var(--ease-in-out), opacity 80ms linear;
+}
+.arrow--dashed .shaft { stroke-dasharray: 20 14; stroke-dashoffset: 0; transition: none; }
+.arrow:not(.is-on) .shaft:not(.is-dashed), .arrow:not(.is-on) .mask-path { opacity: 0; }
+.arrow.is-on .shaft, .arrow.is-on .mask-path {
+  stroke-dashoffset: 0;
+  transition-delay: var(--d, 0ms);
+}
+.arrow--dashed.is-on .shaft { transition: none; }
+.arrow .head {
+  opacity: 0;
+  transform: scale(.3);
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: opacity var(--dur-s) var(--ease-out), transform var(--dur-l) var(--ease-spring);
+}
+.arrow.is-on .head {
+  opacity: 1;
+  transform: none;
+  transition-delay: calc(var(--d, 0ms) + var(--dur-draw) * .8);
+}
+
+/* ==========================================================================
+   Zustands-Modifikatoren (data-mod="3:is-dimmed" usw.)
+   ========================================================================== */
+.is-dimmed { opacity: .22; }
+.is-muted { opacity: .45; filter: grayscale(.7); }
+.is-lifted {
+  --e: var(--ease-spring);
+  transform: translateY(-16px) scale(1.04);
+  box-shadow: 0 36px 70px -24px rgba(27, 42, 58, .55);
+}
+.is-tilted, .is-tilted-sm { --t: calc(var(--dur-l) * 1.4); --e: var(--ease-spring); }
+.is-tilted { transform: rotate(-6deg); }
+.is-tilted-sm { transform: rotate(2.5deg); }
+
+/* Pfeile «fliessen» weiter: Regel 1 – das Gespräch kann beliebig weitergehen */
+.arrow .flow { opacity: 0; transition: opacity var(--dur-m) ease; }
+.arrow.is-flowing .flow { opacity: 1; animation: ta-flow 1.6s linear infinite; }
+@keyframes ta-flow { to { stroke-dashoffset: -28; } }
+
+/* ==========================================================================
+   Elemente, die nur Akzente tragen (Ring, Funke, Tippen)
+   ========================================================================== */
+.fx-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 6px solid var(--c, var(--navy));
+  pointer-events: none;
+}
+.spark { position: absolute; width: 0; height: 0; pointer-events: none; }
+.spark i {
+  position: absolute;
+  left: -70px;
+  top: -70px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 6px solid var(--el-ink);
+  opacity: 0;
+}
+
+/* ==========================================================================
+   Steuerung durch die Engine und Bewegungsmodi
+   ========================================================================== */
+
+/* Zustand sofort setzen (Rückwärts-Navigation, Sprung, Druck) */
+.no-motion, .no-motion *, .no-motion *::before, .no-motion *::after {
+  transition: none !important;
+  animation: none !important;
+}
+
+.motion-reduced [data-anim]:not(.is-on) { transform: none !important; clip-path: none !important; opacity: 0; }
+.motion-reduced [data-anim="marker"]:not(.is-on) { opacity: 1; }
+.motion-reduced .is-tilted, .motion-reduced .is-tilted-sm, .motion-reduced .is-lifted { transform: none; }
+.motion-reduced .arrow .shaft, .motion-reduced .arrow .mask-path { stroke-dashoffset: 0; }
+.motion-reduced .arrow:not(.is-on) { opacity: 0; }
+.motion-reduced .arrow { transition: opacity var(--dur-m) ease; }
+.motion-reduced .arrow .head { transform: none; }
+.motion-reduced .arrow.is-flowing .flow { animation: none; opacity: 0; }
+
+.motion-off *, .motion-off *::before, .motion-off *::after {
+  transition-duration: 0s !important;
+  transition-delay: 0s !important;
+  animation: none !important;
+}
+
+@media print {
+  * { transition: none !important; animation: none !important; }
+}

@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Transaktionsanalyse – Bewegungsdesign</title>
+<meta name="description" content="Animiertes Kurzreferat Transaktionsanalyse (SK1 Mitarbeiterführung, PVA 3).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&amp;family=Nunito+Sans:ital,wght@0,400..800;1,400..800&amp;display=swap">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/deck.css">
+<link rel="stylesheet" href="assets/css/motion.css">
+<link rel="stylesheet" href="assets/css/slides.css">
+</head>
+<body>
+<div class="viewport">
+<main class="stage" id="stage" aria-roledescription="Präsentation">
+
+<!-- ======================================================================
+     1 · Titel – Primacy: erst das Zitat, dann das Thema
+     ====================================================================== -->
+<section class="slide theme-dark s-title" data-label="Transaktionsanalyse" data-time="0:00-0:30">
+  <p class="eyebrow" data-anim="fade" data-cue="Zitat langsam vorlesen">SK1 Mitarbeiterführung · Kurzreferat</p>
+  <figure class="quote">
+    <span class="quote-bar" data-anim="line-y"></span>
+    <blockquote data-anim="rise" data-delay="200">«Die Antwort […] meines Gesprächspartners ist nicht nur eine Reaktion auf das, was ich sage, <span data-step="1" data-anim="marker" data-cue="«Genau darum geht es heute.»">sondern auch auf das, was mein Gesprächspartner von mir hält.</span>»</blockquote>
+    <figcaption data-anim="fade" data-delay="700">Kälin &amp; Müri (2005, S. 36)</figcaption>
+  </figure>
+  <div class="title-block" data-step="2" data-cue="«Mein Name ist Sandro Kempf …»">
+    <h1 data-anim="rise">Transaktionsanalyse</h1>
+    <p class="subtitle" data-anim="rise" data-i="1">Warum Gespräche <span class="kipp" data-fx="tip" data-fx-delay="900">kippen</span> – und wie man sie zurückholt</p>
+  </div>
+  <p class="byline" data-step="2" data-anim="fade" data-i="3">Sandro Kempf · PVA 3 · 26. Oktober 2026</p>
+  <aside class="notes">
+    <p>[0:00–0:30] PRIMACY: Keine Begrüssungsfloskel. Kamera an, Blick in die Kamera, das Zitat langsam vorlesen. Zwei Sekunden Pause.</p>
+    <p>«Kälin und Müri schreiben: Die Antwort meines Gegenübers ist nicht nur eine Reaktion auf das, was ich sage – sondern auch auf das, was er von mir hält. <b>[Klick]</b> Genau darum geht es heute. <b>[Klick]</b> Mein Name ist Sandro Kempf, und ich zeige euch, warum Gespräche kippen – und wie man sie zurückholt.»</p>
+    <p>Technik: Präsentation in Teams im Modus «Standout» (Referent vor den Folien) teilen, damit Gesicht und später die Karten sichtbar sind. Karten EL / ER / K griffbereit neben der Tastatur.</p>
+  </aside>
+</section>
+
+<!-- ======================================================================
+     2 · Szene – Chat-Dialog, dann Teams-Reaktion
+     ====================================================================== -->
+<section class="slide theme-light s-scene" data-label="Kennt ihr das?" data-time="0:30-1:10">
+  <h2 class="title" data-anim="rise">Kennt ihr das?</h2>
+  <div class="chat">
+    <div class="msg msg--left" data-step="1" data-anim="from-left" data-cue="Sachlich: Frage der Teamleiterin">
+      <span class="msg-who who--er">Teamleiterin</span>
+      <p class="bubble bubble--er">«Bis wann ist der Bericht fertig?»</p>
+    </div>
+    <div class="msg msg--right" data-step="2" data-cue="Gereizt: Antwort des Mitarbeiters">
+      <span class="typing" data-fx="typing" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="msg-who who--el" data-anim="fade" data-delay="750">Mitarbeiter</span>
+      <p class="bubble bubble--el" data-anim="pop" data-delay="750" data-fx="shake" data-fx-delay="1500">«Immer dieser Druck. Mach's doch selbst!»</p>
+    </div>
+    <p class="prompt" data-step="3" data-anim="pop" data-cue="Daumen hoch in Teams">
+      <!-- Icon: Lucide «thumbs-up», ISC-Lizenz (lucide.dev) -->
+      <svg class="thumb" data-fx="wobble" data-fx-delay="700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"/></svg>
+      Daumen hoch in Teams, wenn ihr das kennt.
+    </p>
+  </div>
+  <aside class="notes">
+    <p>[0:30–1:10] Szene mit zwei Stimmen sprechen: sachlich die Frage <b>[Klick]</b> – gereizt die Antwort <b>[Klick]</b>.</p>
+    <p>Dann <b>[Klick]</b>: «Reagiert kurz in Teams mit Daumen hoch, wenn ihr so etwas schon erlebt habt.» 3–5 Sekunden warten, Reaktionen laut kommentieren: «Einige Daumen – ihr seid nicht allein. Dahinter steckt meist kein böser Wille, sondern ein Muster. Und Muster kann man erkennen.»</p>
+    <p>Falls kaum Reaktionen: «Dann habt ihr es vielleicht nur noch nicht bemerkt – nach diesen zehn Minuten schon.»</p>
+  </aside>
+</section>
+
+<!-- ======================================================================
+     3 · ARA – Ziel, Relevanz, Agenda (Agenda morpht in den Kapitel-Tracker)
+     ====================================================================== -->
+<section class="slide theme-light s-ara" data-label="Warum Gespräche kippen – in drei Schritten" data-time="1:10-1:35">
+  <h2 class="title" data-anim="rise">Warum Gespräche kippen – in drei Schritten</h2>
+  <div class="ara">
+    <div class="ara-left">
+      <div class="ara-block" data-step="1" data-anim="rise" data-cue="Absicht">
+        <h3 class="kicker">Ziel</h3>
+        <p>Transaktionen erkennen, einordnen, bewusst steuern.</p>
+      </div>
+      <div class="ara-block" data-step="2" data-anim="rise" data-cue="Relevanz">
+        <h3 class="kicker">Warum für euch?</h3>
+        <p>Wer führt, wird oft ins Eltern-Ich eingeladen – und antwortet dort.</p>
+      </div>
+    </div>
+    <ol class="agenda" data-step="3" data-cue="Agenda">
+      <li data-anim="rise" data-i="0"><span class="agenda-rule" data-anim="line-x" data-i="0"></span><b data-morph="ag1-num">1</b><span data-morph="ag1-label">Drei Ich-Zustände</span></li>
+      <li data-anim="rise" data-i="1"><span class="agenda-rule" data-anim="line-x" data-i="1"></span><b data-morph="ag2-num">2</b><span data-morph="ag2-label">Drei Transaktionsarten</span></li>
+      <li data-anim="rise" data-i="2"><span class="agenda-rule" data-anim="line-x" data-i="2"></span><b data-morph="ag3-num">3</b><span data-morph="ag3-label">Gespräche zurückholen</span><span class="agenda-rule agenda-rule--end" data-anim="line-x" data-i="3"></span></li>
+    </ol>
+  </div>
+  <footer class="foot">Transaktionsanalyse · 3</footer>
+  <aside class="notes">
+    <p>[1:10–1:35] ARA nach Dall – kurz, nicht vorlesen.</p>
+    <p><b>[Klick] Absicht:</b> «Nach diesen zehn Minuten könnt ihr erkennen, was in einem Gespräch passiert – und bewusst gegensteuern.»</p>
+    <p><b>[Klick] Relevanz:</b> «Das betrifft euch als künftige Führungskräfte direkt: Wer führt, wird ständig ins Eltern-Ich eingeladen – durch Rechtfertigungen, Trotz, Anpassung. Und antwortet oft genau dort.» (Beleg folgt auf Folie 9.)</p>
+    <p><b>[Klick] Agenda:</b> «Zuerst die Ich-Zustände, dann die drei Transaktionsarten – und am Schluss lösen wir die Szene auf.» Beim Weiterklicken wandert die Agenda als Kapitelleiste nach oben.</p>
+  </aside>
+</section>
+
+<!-- ======================================================================
+     4 · Drei Ich-Zustände – die Kreise wandern danach in die zwei Personen
+     ====================================================================== -->
+<section class="slide theme-light s-states" data-label="Drei Ich-Zustände – jeder hat alle drei" data-time="1:35-2:45" data-chapter="1">
+  <nav class="tracker"></nav>
+  <h2 class="title" data-anim="rise">Drei Ich-Zustände – jeder hat alle drei</h2>
+  <div class="states">
+    <div class="state" data-step="1" data-cue="Eltern-Ich – gelernt">
+      <div class="ego ego--el ego--xl" data-anim="pop" data-morph="ego-el">EL</div>
+      <h3 data-anim="rise" data-i="1">Eltern-Ich</h3>
+      <p class="state-key key--el" data-anim="rise" data-i="2">gelernt</p>
+      <p class="state-sub" data-anim="rise" data-i="3">kritisch · stützend</p>
+    </div>
+    <div class="state" data-step="2" data-cue="Erwachsenen-Ich – gedacht">
+      <div class="ego ego--er ego--xl" data-anim="pop" data-morph="ego-er">ER</div>
+      <h3 data-anim="rise" data-i="1">Erwachsenen-Ich</h3>
+      <p class="state-key key--er" data-anim="rise" data-i="2">gedacht</p>
+      <p class="state-sub" data-anim="rise" data-i="3">sachlich · prüfend</p>
+    </div>
+    <div class="state" data-step="3" data-cue="Kind-Ich – gefühlt">
+      <div class="ego ego--k ego--xl" data-anim="pop" data-morph="ego-k">K</div>
+      <h3 data-anim="rise" data-i="1">Kind-Ich</h3>
+      <p class="state-key key--k" data-anim="rise" data-i="2">gefühlt</p>
+      <p class="state-sub" data-anim="rise" data-i="3">natürlich · angepasst</p>
+    </div>
+  </div>
+  <p class="formula" data-step="4" data-anim="wipe" data-cue="Überleitung: Transaktion"><b>Transaktion</b> = Reiz + Antwort – jeweils aus einem Ich-Zustand</p>
+  <footer class="foot">Kälin &amp; Müri (2005, S. 36–40); Huber, Begleitskript Kommunikation SK1 · 4</footer>
+  <aside class="notes">
+    <p>[1:35–2:45] Eric Berne hat die TA in den 1950er-Jahren entwickelt. Kälin &amp; Müri beschreiben die drei Ich-Zustände als Lebenskonzepte:</p>
+    <p><b>[Klick] Eltern-Ich = gelernt:</b> Normen und Werte von Bezugspersonen. Zwei Seiten: kritisch («müssen», «immer», «nie») und stützend (hilft, tröstet – kann aber abhängig machen).</p>
+    <p><b>[Klick] Erwachsenen-Ich = gedacht:</b> sammelt Informationen, fragt «wer, was, wann, wie», entscheidet sachlich im Hier und Jetzt.</p>
+    <p><b>[Klick] Kind-Ich = gefühlt:</b> natürlich (spontan, begeistert) oder angepasst (gehorcht, zieht sich zurück; laut Huber auch trotzig, rebellisch).</p>
+    <p>Kernbotschaft: Es gibt keine guten oder schlechten Ich-Zustände (Kälin &amp; Müri, S. 39) – entscheidend ist, welcher gerade aktiv ist. Bezug: Genau das habt ihr im Egogramm ausgewertet.</p>
+    <p><b>[Klick]</b> Überleitung zum Balken: «Wenn zwei Menschen reden, sendet ein Ich-Zustand einen Reiz – und ein Ich-Zustand antwortet. Das ist eine Transaktion. Und davon gibt es drei Arten.» Beim Weiterklicken teilen sich die drei Kreise auf zwei Personen auf.</p>
+  </aside>
+</section>
+
+<!-- ======================================================================
+     5 · Parallel – Pfeile laufen parallel und «fliessen» weiter
+     ====================================================================== -->
+<section class="slide theme-light s-tx s-parallel" data-label="Parallel: Die Antwort passt" data-time="2:45-3:45" data-chapter="2" data-sub="1/3">
+  <nav class="tracker"></nav>
+  <h2 class="title" data-anim="rise">Parallel: Die Antwort passt</h2>
+  <div class="tx">
+    <div class="tx-left">
+      <div class="diagram">
+        <span class="who" data-side="L" data-morph="who-l">Teamleiterin</span>
+        <span class="who" data-side="R" data-morph="who-r">Mitarbeiter</span>
+        <div class="ego ego--el" data-node="L.EL" data-morph="ego-el-l ego-el">EL</div>
+        <div class="ego ego--er" data-node="L.ER" data-morph="ego-er-l ego-er" data-mod="1-1:is-sending" data-fx="pulse" data-fx-step="2" data-fx-delay="850">ER</div>
+        <div class="ego ego--k" data-node="L.K" data-morph="ego-k-l ego-k">K</div>
+        <div class="ego ego--el" data-node="R.EL" data-morph="ego-el-r ego-el">EL</div>
+        <div class="ego ego--er" data-node="R.ER" data-morph="ego-er-r ego-er" data-mod="2-2:is-sending" data-fx="pulse" data-fx-step="1" data-fx-delay="850">ER</div>
+        <div class="ego ego--k" data-node="R.K" data-morph="ego-k-r ego-k">K</div>
+        <svg class="arrows" aria-hidden="true">
+          <g class="arrow arrow--reiz" data-from="L.ER" data-to="R.ER" data-offset="-18" data-step="1" data-anim="draw" data-mod="3:is-flowing"></g>
+          <g class="arrow arrow--antwort" data-from="R.ER" data-to="L.ER" data-offset="-18" data-step="2" data-anim="draw" data-mod="3:is-flowing"></g>
+        </svg>
+      </div>
+      <p class="legend"><span class="lg lg--reiz">Reiz</span><span class="lg lg--antwort">Antwort</span></p>
+    </div>
+    <div class="tx-right">
+      <p class="say say--er" data-step="1" data-anim="rise" data-cue="Reiz ER → ER">«Bis wann brauchst du die Zahlen?»</p>
+      <p class="say say--er" data-step="2" data-anim="rise" data-cue="Antwort ER → ER">«Bis Mittwoch – dann prüfe ich sie noch.»</p>
+      <p class="rule" data-step="3" data-anim="rise" data-cue="Regel 1 – Pfeile fliessen weiter"><b>Regel 1:</b> Solange Transaktionen parallel laufen, kann das Gespräch beliebig weitergehen.</p>
+    </div>
+  </div>
+  <footer class="foot">Berne (1964); Stewart &amp; Joines (2023) · 5</footer>
+  <aside class="notes">
+    <p>[2:45–3:45] Definition: Bei einer parallelen (auch: komplementären) Transaktion kommt die Antwort aus dem Ich-Zustand, der angesprochen wurde – und geht zurück an den, der gesendet hat. Die Pfeile laufen parallel.</p>
+    <p><b>[Klick]</b> Beispiel: Die Teamleiterin fragt sachlich aus dem Erwachsenen-Ich, <b>[Klick]</b> der Mitarbeiter antwortet sachlich aus dem Erwachsenen-Ich.</p>
+    <p><b>[Klick]</b> Bernes erste Kommunikationsregel: Solange Transaktionen parallel sind, kann die Kommunikation – im Prinzip – unbegrenzt weitergehen. (Die Pfeile «fliessen» jetzt weiter.)</p>
+    <p>Differenzierung (zeigt Tiefe): Parallel heisst nicht automatisch gut. Fall Berger aus dem Unterricht: Der Chef spricht aus dem kritischen Eltern-Ich, die Mitarbeitenden passen sich aus dem Kind-Ich an. Das läuft reibungslos – kostet aber Eigenverantwortung und Motivation.</p>
+  </aside>
+</section>
+
+<!-- ======================================================================
+     6 · Gekreuzt – Funke am Kreuzungspunkt, dann kippt das Diagramm
+     ====================================================================== -->
+<section class="slide theme-light s-tx s-crossed" data-label="Gekreuzt: Das Gespräch kippt" data-time="3:45-4:45" data-chapter="2" data-sub="2/3">
+  <nav class="tracker"></nav>
+  <h2 class="title" data-anim="rise">Gekreuzt: Das Gespräch <span class="kipp" data-fx="tip" data-fx-step="3">kippt</span></h2>
+  <div class="tx">
+    <div class="tx-left">
+      <div class="diagram" data-mod="3:is-tilted">
+        <span class="who" data-side="L" data-morph="who-l">Teamleiterin</span>
+        <span class="who" data-side="R" data-morph="who-r">Mitarbeiter</span>
+        <div class="ego ego--el" data-node="L.EL" data-morph="ego-el-l ego-el" data-fx="pulse" data-fx-step="2" data-fx-delay="850">EL</div>
+        <div class="ego ego--er" data-node="L.ER" data-morph="ego-er-l ego-er" data-mod="1-1:is-sending">ER</div>
+        <div class="ego ego--k" data-node="L.K" data-morph="ego-k-l ego-k">K</div>
+        <div class="ego ego--el" data-node="R.EL" data-morph="ego-el-r ego-el">EL</div>
+        <div class="ego ego--er" data-node="R.ER" data-morph="ego-er-r ego-er" data-fx="pulse" data-fx-step="1" data-fx-delay="850">ER</div>
+        <div class="ego ego--k" data-node="R.K" data-morph="ego-k-r ego-k" data-mod="2-2:is-sending">K</div>
+        <svg class="arrows" aria-hidden="true">
+          <g class="arrow arrow--reiz" data-from="L.ER" data-to="R.ER" data-step="1" data-anim="draw"></g>
+          <g class="arrow arrow--antwort" data-from="R.K" data-to="L.EL" data-step="2" data-anim="draw"></g>
+        </svg>
+        <span class="spark" data-fx="spark" data-fx-step="2" data-fx-delay="470" aria-hidden="true"><i></i><i></i></span>
+      </div>
+      <p class="legend"><span class="lg lg--reiz">Reiz</span><span class="lg lg--antwort">Antwort</span></p>
+    </div>
+    <div class="tx-right">
+      <p class="say say--er" data-step="1" data-anim="rise" data-cue="Reiz ER → ER (Szene vom Anfang)">«Bis wann ist der Bericht fertig?»</p>
+      <p class="say say--k" data-step="2" data-anim="rise" data-mod="3:is-tilted-sm" data-cue="Antwort K → EL – Pfeile kreuzen">«Immer dieser Druck. Mach's doch selbst!»</p>
+      <p class="rule" data-step="3" data-anim="rise" data-cue="Regel 2 – Gespräch kippt"><b>Regel 2:</b> Kreuzen sich die Pfeile, kippt das Gespräch – bis jemand den Ich-Zustand wechselt.</p>
+    </div>
+  </div>
+  <footer class="foot">Berne (1964); Stewart &amp; Joines (2023) · 6</footer>
+  <aside class="notes">
+    <p>[3:45–4:45] Das ist die Szene vom Anfang. <b>[Klick]</b> Die Teamleiterin fragt sachlich aus dem Erwachsenen-Ich an das Erwachsenen-Ich.</p>
+    <p><b>[Klick]</b> Die Antwort kommt aber aus dem Kind-Ich (trotzig) und richtet sich an ein Eltern-Ich – der Mitarbeiter hört einen Vorwurf, der so nie gesagt wurde. Die Pfeile kreuzen sich.</p>
+    <p><b>[Klick]</b> Bernes zweite Regel: Bei einer gekreuzten Transaktion bricht die Kommunikation ab oder nimmt eine neue Richtung – bis mindestens eine Person den Ich-Zustand wechselt. (Das Diagramm kippt.)</p>
+    <p>Ausblick: Kreuzen ist nicht nur ein Problem. Man kann auch bewusst kreuzen, um aus einem festgefahrenen Muster auszusteigen – das zeige ich gleich bei der Auflösung.</p>
+  </aside>
+</section>
+
+<!-- ======================================================================
+     7 · Verdeckt – gestrichelte Ebene «unter» der sichtbaren
+     ====================================================================== -->
+<section class="slide theme-light s-tx s-ulterior" data-label="Verdeckt: Gesagt ist nicht gemeint" data-time="4:45-5:45" data-chapter="2" data-sub="3/3">
+  <nav class="tracker"></nav>
+  <h2 class="title" data-anim="rise">Verdeckt: Gesagt ist nicht gemeint</h2>
+  <div class="tx">
+    <div class="tx-left">
+      <div class="diagram">
+        <span class="who" data-side="L" data-morph="who-l">Teamleiterin</span>
+        <span class="who" data-side="R" data-morph="who-r">Mitarbeiter</span>
+        <div class="ego ego--el" data-node="L.EL" data-morph="ego-el-l ego-el" data-mod="2-2:is-sending" data-fx="pulse" data-fx-step="3" data-fx-delay="850">EL</div>
+        <div class="ego ego--er" data-node="L.ER" data-morph="ego-er-l ego-er" data-mod="1-1:is-sending">ER</div>
+        <div class="ego ego--k" data-node="L.K" data-morph="ego-k-l ego-k">K</div>
+        <div class="ego ego--el" data-node="R.EL" data-morph="ego-el-r ego-el">EL</div>
+        <div class="ego ego--er" data-node="R.ER" data-morph="ego-er-r ego-er" data-fx="pulse" data-fx-step="1" data-fx-delay="850">ER</div>
+        <div class="ego ego--k" data-node="R.K" data-morph="ego-k-r ego-k" data-mod="3-3:is-sending" data-fx="pulse" data-fx-step="2" data-fx-delay="850">K</div>
+        <svg class="arrows" aria-hidden="true">
+          <g class="arrow arrow--reiz" data-from="L.ER" data-to="R.ER" data-step="1" data-anim="draw" data-mod="4:is-dimmed"></g>
+          <g class="arrow arrow--antwort" data-from="L.EL" data-to="R.K" data-offset="-14" data-dashed data-step="2" data-anim="draw"></g>
+          <g class="arrow arrow--antwort" data-from="R.K" data-to="L.EL" data-offset="-14" data-dashed data-step="3" data-anim="draw"></g>
+        </svg>
+      </div>
+      <p class="legend"><span class="lg lg--said">gesagt</span><span class="lg lg--meant">gemeint</span></p>
+    </div>
+    <div class="tx-right">
+      <p class="say say--er" data-step="1" data-anim="rise" data-mod="4:is-dimmed" data-cue="Gesagt – neutral sprechen"><b>Gesagt:</b> «Der Bericht ist ja wirklich sehr ausführlich.»</p>
+      <p class="say say--meant" data-step="2" data-anim="wipe-down" data-cue="Gemeint – ironisch sprechen"><b>Gemeint:</b> «Viel zu lang!»</p>
+      <p class="reaction" data-step="3" data-anim="rise" data-cue="Reaktion aus dem K">Reaktion aus dem K: gekränkt oder trotzig</p>
+      <p class="rule" data-step="4" data-anim="rise" data-cue="Regel 3 – gesagte Ebene tritt zurück"><b>Regel 3:</b> Über das Ergebnis entscheidet die gemeinte, psychologische Ebene.</p>
+    </div>
+  </div>
+  <footer class="foot">Berne (1964); Stewart &amp; Joines (2023); Heller (o. J.) · 7</footer>
+  <aside class="notes">
+    <p>[4:45–5:45] Die schwierigste Form: Zwei Botschaften laufen gleichzeitig. Den Satz einmal neutral und einmal ironisch sprechen – der Tonfall verrät die psychologische Ebene.</p>
+    <p><b>[Klick] Sozial</b> (durchgezogen): ein sachliches Kompliment, Erwachsenen-Ich an Erwachsenen-Ich.</p>
+    <p><b>[Klick] Psychologisch</b> (gestrichelt): Kritik aus dem Eltern-Ich an das Kind-Ich – <b>[Klick]</b> und der Mitarbeiter reagiert genau darauf, aus dem Kind-Ich: gekränkt oder trotzig.</p>
+    <p><b>[Klick]</b> Bernes dritte Regel: Das Verhalten wird auf der psychologischen Ebene entschieden, nicht auf der sozialen. Der Mitarbeiter fühlt sich kritisiert, obwohl «nichts Schlimmes» gesagt wurde. (Die gesagte Ebene tritt zurück.)</p>
+    <p>Folge: Bleibt das unausgesprochen, entstehen «Spiele» im Sinne von Berne – wiederkehrende Muster, bei denen am Ende beide unzufrieden sind. Gegenmittel: das Gemeinte offen ansprechen, z. B. mit einer Ich-Botschaft.</p>
+  </aside>
+</section>
+
+<!-- ======================================================================
+     8 · Wie antworte ich? – Kamera-Moment mit den physischen Karten
+     ====================================================================== -->
+<section class="slide theme-light s-answer" data-label="Wie antworte ich?" data-time="5:45-7:00" data-chapter="3">
+  <nav class="tracker"></nav>
+  <h2 class="title" data-anim="rise">Wie antworte ich?</h2>
+  <div class="incoming">
+    <p class="incoming-quote" data-anim="rise" data-i="1">«Immer dieser Druck. Mach's doch selbst!»</p>
+    <span class="tag tag--k" data-step="2" data-anim="stamp" data-cue="GELBE K-Karte hochhalten">aus dem K</span>
+  </div>
+  <div class="answers">
+    <p class="cue-chip" data-step="1-2" data-anim="pop" data-cue="«Aus welchem Ich kommt das?» – 2 s Pause">Aus welchem Ich kommt das?</p>
+    <article class="answer answer--el" data-step="3" data-anim="flip" data-mod="6:is-muted" data-cue="TERRAKOTTA EL-Karte">
+      <p class="answer-from">aus dem EL</p>
+      <p class="answer-text">«So redest du nicht mit mir!»</p>
+      <p class="answer-result">→ Machtkampf</p>
+    </article>
+    <article class="answer answer--k" data-step="4" data-anim="flip" data-mod="6:is-muted" data-cue="GELBE K-Karte">
+      <p class="answer-from">aus dem K</p>
+      <p class="answer-text">«Sorry, war nicht so gemeint.»</p>
+      <p class="answer-result">→ Rückzug</p>
+    </article>
+    <article class="answer answer--er" data-step="5" data-anim="flip" data-mod="6:is-lifted" data-cue="BLAUE ER-Karte (länger halten)">
+      <p class="answer-from">aus dem ER</p>
+      <p class="answer-text">«Was brauchst du, damit es bis Freitag klappt?»</p>
+      <p class="answer-result">→ zurück zur Sache</p>
+    </article>
+    <span class="answers-focus" data-step="6" data-cue="Merksatz: «Ich muss das Spiel nicht mitspielen.»"></span>
+  </div>
+  <footer class="foot">vgl. Kälin &amp; Müri (2005, S. 40–41) · 8</footer>
+  <aside class="notes">
+    <p>[5:45–7:00] MEDIENBRUCH MIT KARTEN – Standout-Modus, Kamera gross. Optional <b>B</b> drücken (Folie schwarz), solange die Karten in der Kamera sind.</p>
+    <p>1. Antwort des Mitarbeiters zitieren: «Immer dieser Druck. Mach's doch selbst!» – <b>[Klick]</b> «Aus welchem Ich kommt das?» – 2 Sekunden Pause – GELBE K-Karte hochhalten <b>[Klick]</b>.</p>
+    <p>2. «Und wie antworte ich jetzt?» <b>[Klick]</b> TERRAKOTTA EL-Karte: «So redest du nicht mit mir!» – technisch sogar parallel (EL antwortet auf K), deshalb geht es weiter, aber als Machtkampf. Parallel ist nicht automatisch gut.</p>
+    <p><b>[Klick]</b> GELBE K-Karte: «Sorry, war nicht so gemeint.» – Konflikt vermieden, aber der Termin ist nicht geklärt: Rückzug.</p>
+    <p><b>[Klick]</b> BLAUE ER-Karte (länger halten): «Was brauchst du, damit es bis Freitag klappt?» – ich nehme die Eltern-Rolle nicht an, die mir angeboten wird, sondern kreuze bewusst zurück ins Erwachsenen-Ich. Das lädt das Gegenüber ein, ebenfalls zu wechseln – Regel 2 in Aktion.</p>
+    <p><b>[Klick]</b> Beleg: Kälin &amp; Müri zeigen dasselbe Muster (Mitarbeiter findet eine Unterlage nicht): Reaktionen aus EL und K lösen das Problem kaum, die Reaktion aus dem ER schon. Merksatz: «Ich muss das Spiel nicht mitspielen, das mir angeboten wird.»</p>
+  </aside>
+</section>
+
+<!-- ======================================================================
+     9 · Ist die TA noch aktuell? – Egogramm baut sich auf, Kritik wird markiert
+     ====================================================================== -->
+<section class="slide theme-light s-ego" data-label="Ist die TA noch aktuell?" data-time="7:00-8:15">
+  <h2 class="title" data-anim="rise">Ist die TA noch aktuell?</h2>
+  <div class="ego-legend">
+    <span class="lg-item" data-anim="fade" data-i="1"><i class="sw sw--now"></i>Egogramm Führungskräfte (Ø)</span>
+    <span class="lg-item" data-step="2" data-anim="fade"><i class="sw sw--wish"></i>Wunschbild</span>
+  </div>
+  <div class="chart" role="img" aria-label="Egogramm: Führungskräfte im Vergleich zum Wunschbild (Skala 0–100)">
+    <div class="avg" data-step="2">
+      <span class="avg-line" data-anim="line-x" data-delay="300"></span>
+      <span class="avg-label" data-anim="fade" data-delay="700">Ø 50</span>
+    </div>
+    <div class="bar-group">
+      <span class="bar bar--now" style="--v:57" data-step="1" data-anim="grow" data-i="0" data-cue="Ist-Werte Führungskräfte"></span>
+      <span class="bar bar--wish" style="--v:40" data-step="2" data-anim="grow" data-i="0" data-cue="Wunschbild · Ø 50"></span>
+      <span class="delta" style="--v:57" data-step="3" data-anim="pop" data-cue="Lücken: krit. EL zu hoch, natürl. K zu tief">≈ +17</span>
+    </div>
+    <div class="bar-group" data-mod="3:is-dimmed">
+      <span class="bar bar--now" style="--v:73" data-step="1" data-anim="grow" data-i="1"></span>
+      <span class="bar bar--wish" style="--v:63" data-step="2" data-anim="grow" data-i="1"></span>
+    </div>
+    <div class="bar-group" data-mod="3:is-dimmed">
+      <span class="bar bar--now" style="--v:78" data-step="1" data-anim="grow" data-i="2"></span>
+      <span class="bar bar--wish" style="--v:78" data-step="2" data-anim="grow" data-i="2"></span>
+    </div>
+    <div class="bar-group">
+      <span class="bar bar--now" style="--v:47" data-step="1" data-anim="grow" data-i="3"></span>
+      <span class="bar bar--wish" style="--v:65" data-step="2" data-anim="grow" data-i="3"></span>
+      <span class="delta" style="--v:65" data-step="3" data-anim="pop" data-i="1">≈ −18</span>
+    </div>
+    <div class="bar-group" data-mod="3:is-dimmed">
+      <span class="bar bar--now" style="--v:25" data-step="1" data-anim="grow" data-i="4"></span>
+      <span class="bar bar--wish" style="--v:37" data-step="2" data-anim="grow" data-i="4"></span>
+    </div>
+  </div>
+  <div class="chart-labels">
+    <span class="key--el">krit. EL</span>
+    <span class="key--el" data-mod="3:is-dimmed">stütz. EL</span>
+    <span class="key--er" data-mod="3:is-dimmed">ER</span>
+    <span class="key--k">natürl. K</span>
+    <span class="key--k" data-mod="3:is-dimmed">angep. K</span>
+  </div>
+  <p class="takeaway" data-step="3" data-anim="rise" data-delay="300">Führungskräfte: kritischer, weniger spontan als gewünscht.</p>
+  <p class="study" data-step="4" data-anim="rise" data-cue="Studie 2024">2024: Erwachsenen-Ich hängt mit Commitment zusammen (β = .375, n = 754) – <span data-step="5" data-anim="marker" data-cue="Kritisch einordnen: Selbstauskunft, Querschnitt">aber Selbstauskunft, Querschnitt.</span></p>
+  <footer class="foot">Kälin &amp; Müri (2005, S. 57–59): N = 4280 (1994), Skala 0–100, Werte aus Grafik abgelesen (± 3); Rahiman &amp; Kodikal (2024) · 9</footer>
+  <aside class="notes">
+    <p>[7:00–8:15] Beantwortet die Frage, die Daniel bei älteren Theorien stellt – bevor sie kommt.</p>
+    <p><b>[Klick]</b> Grafik (Kälin &amp; Müri): Egogramm von 4280 Führungskräften (1994) <b>[Klick]</b> im Vergleich zu dem Bild, das sich Führungskräfte und Mitarbeitende wünschen.</p>
+    <p><b>[Klick]</b> Kritisches Eltern-Ich ≈ 57 statt gewünscht ≈ 40, natürliches Kind-Ich ≈ 47 statt ≈ 65. Das Erwachsenen-Ich liegt bereits hoch (≈ 78). Also: mehr Kritik und weniger Spontaneität, als allen lieb ist – der Nährboden für gekreuzte Transaktionen. Hinweis: Werte aus der Grafik abgelesen; Daten von 1994.</p>
+    <p><b>[Klick]</b> Neuere Forschung: Rahiman &amp; Kodikal (2024), begutachtet, 754 Bankangestellte in Indien. Das Erwachsenen-Ich hängt mit Commitment (β = .375) und selbst eingeschätzter Produktivität (β = .387) zusammen.</p>
+    <p><b>[Klick]</b> Kritisch einordnen (Daniels Methodik-Frage): Befragung zu einem Zeitpunkt → keine Ursache-Wirkung; alles Selbstauskunft aus demselben Fragebogen; Produktivität selbst eingeschätzt; Modell nachträglich angepasst; indischer Bankenkontext. Zudem Widerspruch im Artikel: «alle Hypothesen bestätigt» – drei wurden abgelehnt.</p>
+    <p>Fazit: Die TA ist nicht widerlegt, sondern vor allem ein Praxis- und Reflexionsmodell. Für Therapie ist die Wirksamkeit gut belegt (Meta-Analyse Vos &amp; van Rijn, 2022, 41 Studien); für Führung gibt es erste, methodisch begrenzte Studien.</p>
+  </aside>
+</section>
+
+<!-- ======================================================================
+     10 · Abschluss – Recency: Zusammenfassung, Essenz, Appell, Fragen
+     ====================================================================== -->
+<section class="slide theme-dark s-close" data-label="Gespräche kippen selten am Inhalt – sondern am Ich-Zustand." data-time="8:15-9:00">
+  <p class="summary" data-cue="Zusammenfassung">
+    <span class="sum-item" data-anim="rise" data-i="0">
+      <svg viewBox="0 0 72 44" aria-hidden="true"><path d="M6 14H58M50 7l9 7-9 7"/><path d="M66 30H14M22 23l-9 7 9 7"/></svg>
+      Parallel läuft
+    </span>
+    <span class="sum-item" data-anim="rise" data-i="2">
+      <svg viewBox="0 0 72 44" aria-hidden="true"><path d="M6 22H58M50 15l9 7-9 7"/><path d="M64 40 14 6M14 16l-2-11 11 1"/></svg>
+      gekreuzt kippt
+    </span>
+    <span class="sum-item" data-anim="rise" data-i="4">
+      <svg viewBox="0 0 72 44" aria-hidden="true"><path class="dash" d="M6 8 58 34"/><path d="M47 35l12-1-6-10"/></svg>
+      verdeckt wirkt im Untergrund
+    </span>
+  </p>
+  <h2 class="essence" data-step="1" data-anim="rise" data-cue="Essenz – Zitat vom Anfang">Gespräche <span class="kipp" data-fx="tip" data-fx-delay="800">kippen</span> selten am Inhalt – sondern am Ich-Zustand.</h2>
+  <p class="appeal" data-step="2" data-anim="rise" data-cue="Appell">Erst erkennen, aus welchem Ich gesendet wird – dann bewusst aus dem Erwachsenen-Ich antworten.</p>
+  <div class="closing" data-step="3" data-cue="Fragen – optional Karten-Fächer in die Kamera">
+    <p class="questions" data-anim="rise">Fragen?</p>
+    <div class="fan" aria-hidden="true">
+      <span class="mini-card mini-card--el" data-anim="fan" data-i="1" style="--r:-16deg">EL</span>
+      <span class="mini-card mini-card--k" data-anim="fan" data-i="2" style="--r:16deg">K</span>
+      <span class="mini-card mini-card--er" data-anim="fan" data-i="3" style="--r:0deg">ER</span>
+    </div>
+    <p class="byline" data-anim="fade" data-i="4">Sandro Kempf · SK1 · PVA 3</p>
+  </div>
+  <aside class="notes">
+    <p>[8:15–9:00] RECENCY, EssA nach Dall – langsam, Blick in die Kamera. Rest: ca. 1 Minute Puffer.</p>
+    <p>Zusammenfassung (Zeile oben): «Parallel läuft, gekreuzt kippt, verdeckt wirkt im Untergrund.»</p>
+    <p><b>[Klick] Essenz:</b> «Erinnert euch an das Zitat vom Anfang: Die Antwort ist auch eine Reaktion darauf, was der andere von mir hält. Gespräche kippen selten am Inhalt – sondern am Ich-Zustand.»</p>
+    <p><b>[Klick] Appell:</b> «Beim nächsten Mal: zuerst erkennen, aus welchem Ich gesendet wird – dann bewusst aus dem Erwachsenen-Ich antworten.»</p>
+    <p><b>[Klick]</b> Optional: alle drei Karten als Fächer in die Kamera – «Jeder hat alle drei. Entscheidend ist, welche Karte ich ziehe.» «Vielen Dank – ich freue mich auf eure Fragen.»</p>
+    <p><b>Q&amp;A – Kurzantworten:</b></p>
+    <ul>
+      <li>Unterschied zu Schulz von Thun? Er zerlegt EINE Nachricht in vier Seiten; die TA schaut auf die Ich-Zustände im Austausch. Wer mit dem Beziehungsohr hört, antwortet oft aus dem Kind-Ich.</li>
+      <li>Ist das Eltern-Ich schlecht? Nein – keine guten oder schlechten Ich-Zustände (Kälin &amp; Müri, S. 39). Problematisch nur, wenn unpassend oder dauerhaft dominant.</li>
+      <li>Immer aus dem ER? Nein. Ziel ist ein starkes ER, das wählt, welcher Ich-Zustand passt (Kälin &amp; Müri, S. 59).</li>
+      <li>Woran erkenne ich Ich-Zustände online? Signalwörter: «müssen», «immer», «nie» (kritisches EL); «wer, was, wann» (ER); «toll» (natürliches K); dazu Tonfall, Tempo, Mimik. Im Zweifel nachfragen.</li>
+      <li>Wenn das Gegenüber nicht wechselt? Ruhig im ER bleiben, Angebot wiederholen, ggf. vertagen.</li>
+      <li>Noch aktuell / Methodik? Siehe Folie 9: nicht widerlegt; Therapie-Wirksamkeit belegt (Vos &amp; van Rijn, 2022); Führungsstudien mit Selbstauskunft und Querschnitt.</li>
+      <li>Grundhaltungen? Ich bin o.k. / du bist o.k. als Idealposition; die anderen drei Positionen prägen, aus welchem Ich wir bevorzugt senden (Huber, Skript).</li>
+    </ul>
+  </aside>
+</section>
+
+<!-- ======================================================================
+     11 · Quellen – Anhang, wird beim Präsentieren übersprungen
+     ====================================================================== -->
+<section class="slide theme-light s-sources" data-label="Quellen" data-hidden>
+  <h2 class="title">Quellen</h2>
+  <ul class="refs">
+    <li>Berne, E. (1964). <i>Games people play: The psychology of human relationships.</i> Grove Press.</li>
+    <li>Heller, M. (o. J.). <i>Transaktionen analysieren.</i> TA Schweiz. https://www.ta-schweiz.ch/was-ist-transaktionsanalyse/konzepte-der-transaktionsanalyse/transaktionen</li>
+    <li>Huber, D. (o. J.). <i>Begleitskript Kommunikation</i> [Unterlagen Modul SK1]. FFHS.</li>
+    <li>Kälin, K. &amp; Müri, P. (2005). <i>Sich und andere führen.</i> hep.</li>
+    <li>Rahiman, H. U. &amp; Kodikal, R. (2024). Beneath the surface: Uncovering the relationship between ego states, organizational commitment, and productivity among Indian bankers. <i>Asia Pacific Management Review, 29</i>(2), 151–164. https://doi.org/10.1016/j.apmrv.2023.12.001</li>
+    <li>Stewart, I. &amp; Joines, V. (2023). <i>Die Transaktionsanalyse: Eine Einführung in die TA</i> (W. Rautenberg, Übers.). Herder.</li>
+    <li>Vos, J. &amp; van Rijn, B. (2022). The effectiveness of transactional analysis treatments and their predictors: A systematic literature review and explorative meta-analysis. <i>Journal of Humanistic Psychology, 66</i>(3), 637–673. https://doi.org/10.1177/00221678221117111</li>
+  </ul>
+  <footer class="foot">Beispieldialoge und Grafiken: eigene Darstellung · Anhang, wird nicht präsentiert</footer>
+  <aside class="notes">
+    <p>Anhang – nicht zeigen. Nur im hochgeladenen Dokument.</p>
+    <p>Offen vor dem Upload: Seitenzahlen zu den Kommunikationsregeln bei Stewart &amp; Joines (2023) nachtragen; Bernes Regeln wenn möglich im Original (1964) prüfen. Bei Heller (o. J.) ggf. Abrufdatum ergänzen.</p>
+  </aside>
+</section>
+
+<div class="morph-layer" id="morph-layer" aria-hidden="true"></div>
+<div class="safezone" hidden>ca. Bereich der Referentin / des Referenten<br>im Teams-Modus «Standout»</div>
+</main>
+</div>
+
+<div class="hud" aria-hidden="true">
+  <div class="hud-bar"><div class="hud-fill"></div></div>
+  <span class="hud-count"></span>
+</div>
+<div class="toast" role="status" aria-live="polite"></div>
+<div class="blackout" aria-hidden="true"></div>
+
+<div class="help" hidden>
+  <div class="help-card" role="dialog" aria-label="Tastenkürzel">
+    <h2>Steuerung</h2>
+    <dl>
+      <dt><kbd>→</kbd> <kbd>Leertaste</kbd> <kbd>Bild ↓</kbd> Klick</dt><dd>nächster Schritt</dd>
+      <dt><kbd>←</kbd> <kbd>Bild ↑</kbd> Rechtsklick</dt><dd>vorheriger Schritt</dd>
+      <dt><kbd>⇧</kbd> + <kbd>→</kbd> / <kbd>←</kbd></dt><dd>ganze Folie vor / zurück</dd>
+      <dt><kbd>5</kbd> <kbd>Enter</kbd></dt><dd>zu Folie 5 springen</dd>
+      <dt><kbd>P</kbd></dt><dd>Referentenansicht (Notizen, Timer, Vorschau)</dd>
+      <dt><kbd>B</kbd> <kbd>.</kbd></dt><dd>Folie schwarz – Fokus auf Kamera/Karten</dd>
+      <dt><kbd>F</kbd></dt><dd>Vollbild</dd>
+      <dt><kbd>M</kbd></dt><dd>Bewegung: voll → reduziert → aus</dd>
+      <dt><kbd>S</kbd></dt><dd>Teams-«Standout»-Bereich einblenden</dd>
+      <dt><kbd>H</kbd> <kbd>?</kbd></dt><dd>diese Hilfe</dd>
+    </dl>
+    <p>Übersicht aller Folien im Endzustand: <code>index.html?print</code> · PDF: Drucken → «Als PDF sichern», Hintergrundgrafiken an.</p>
+  </div>
+</div>
+
+<script src="assets/js/motion.js"></script>
+<script src="assets/js/diagram.js"></script>
+<script src="assets/js/deck.js"></script>
+</body>
+</html>
