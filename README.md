@@ -10,11 +10,14 @@ Das Repo enthält die bestehende Präsentation als browserbasiertes Deck mit kli
 
 ## Schnellstart
 
-1. `index.html` per Doppelklick in **Chrome oder Edge** öffnen. Ein Server ist nicht nötig.
+**Online ansehen:** <https://saene-kay.github.io/ta-bewegungsdesign/>
+Die Seite wird über GitHub Pages direkt aus dem Branch `main` veröffentlicht. Jeder Push aktualisiert sie nach etwa einer Minute.
+
+1. Den Link oben in **Chrome oder Edge** öffnen.
 2. Mit **→ / Leertaste / Klick** weiterschalten, **P** öffnet die Referentenansicht (Pop-up erlauben).
 3. Für die Präsentation **F** (Vollbild) drücken und in Teams den Bildschirm bzw. das Fenster teilen.
 
-Alternativ lokal mit Server (z. B. für Live-Reload-Tools):
+Lokal lässt sich das Deck mit einem kleinen Server öffnen. Das ist sinnvoll, wenn der Ordner in OneDrive liegt und Chrome dort die CSS- und JS-Dateien nicht lesen darf:
 
 ```bash
 python3 -m http.server 8000
