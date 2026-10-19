@@ -1,4 +1,4 @@
-# Transaktionsanalyse – Bewegungsdesign
+# Transaktionsanalyse: Bewegungsdesign
 
 Grundlage für ein animiertes Kurzreferat zur **Transaktionsanalyse** (SK1 Mitarbeiterführung, PVA 3, 26.10.2026, 10 Min. online in MS Teams).
 

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   diagram.js – Transaktionspfeile aus Deklarationen bauen
+   diagram.js: Transaktionspfeile aus Deklarationen bauen
    <div class="diagram">
      <div class="ego ego--er" data-node="L.ER">ER</div> …
      <svg class="arrows">
@@ -26,7 +26,7 @@
   function nodesOf(diagram) {
     const nodes = {};
     diagram.querySelectorAll('[data-node]').forEach((el) => {
-      // offset*-Werte sind Layout-Koordinaten – unabhängig von Skalierung und Transformationen
+      // offset*-Werte sind Layout-Koordinaten, unabhängig von Skalierung und Transformationen
       nodes[el.dataset.node] = {
         x: el.offsetLeft + el.offsetWidth / 2,
         y: el.offsetTop + el.offsetHeight / 2,

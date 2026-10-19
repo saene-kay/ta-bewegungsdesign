@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Deck – Bühne, Folien-Grundlayout, Bedienelemente, Druck
+   Deck: Bühne, Folien-Grundlayout, Bedienelemente, Druck
    ========================================================================== */
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -50,8 +50,8 @@ html, body {
   visibility: visible;
   transition: opacity var(--dur-slide) var(--ease-out);
 }
-/* Die verlassene Folie bleibt deckend darunter, bis die neue ganz da ist –
-   so gibt es beim Überblenden keinen Helligkeitseinbruch. */
+/* Die verlassene Folie bleibt deckend darunter, bis die neue ganz da ist.
+   So gibt es beim Überblenden keinen Helligkeitseinbruch. */
 .slide.is-leaving { z-index: 1; opacity: 1; visibility: visible; }
 
 .theme-light { background: var(--cream); color: var(--navy); }

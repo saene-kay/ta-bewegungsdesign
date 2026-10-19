@@ -1,5 +1,5 @@
 /* ==========================================================================
-   deck.js – Navigation, Schritt-Zustände, Skalierung, Referenten-Synchronisation
+   deck.js: Navigation, Schritt-Zustände, Skalierung, Referenten-Synchronisation
    Attribute im HTML:
      data-step="2"      sichtbar ab Schritt 2   ·   data-step="1-2"  nur in Schritt 1–2
      data-anim="rise"   Art des Erscheinens (siehe motion.css)
@@ -328,7 +328,7 @@
   function openPresenter() {
     if (presenter && !presenter.closed) { presenter.focus(); return; }
     presenter = window.open('presenter.html', 'ta-presenter', 'popup,width=1320,height=860');
-    if (!presenter) toast('Pop-up blockiert – bitte für diese Seite erlauben.');
+    if (!presenter) toast('Pop-up blockiert. Bitte für diese Seite erlauben.');
   }
 
   window.addEventListener('message', (e) => {

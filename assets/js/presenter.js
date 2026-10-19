@@ -1,5 +1,5 @@
 /* ==========================================================================
-   presenter.js – Referentenansicht: Notizen, Vorschau, Timer gegen den Plan
+   presenter.js: Referentenansicht mit Notizen, Vorschau, Timer gegen den Plan
    Wird aus der Präsentation mit Taste P geöffnet und spricht per postMessage mit ihr.
    ========================================================================== */
 (function () {

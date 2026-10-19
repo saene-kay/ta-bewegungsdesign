@@ -1,7 +1,7 @@
 /* ==========================================================================
    Bewegungs-Vokabular
-   ZUSTAND  – data-anim / data-mod: per CSS-Transition, vor- und rückwärts.
-   AKZENT   – data-fx: einmalige WAAPI-Animation, nur beim Vorwärtsgehen (motion.js).
+   ZUSTAND  (data-anim, data-mod) per CSS-Transition, vor- und rückwärts.
+   AKZENT   (data-fx) einmalige WAAPI-Animation, nur beim Vorwärtsgehen (motion.js).
    Die Engine setzt .is-on bzw. die Mod-Klassen; hier steht nur, wie es aussieht.
    ========================================================================== */
 
@@ -116,7 +116,7 @@
 .is-tilted { transform: rotate(-6deg); }
 .is-tilted-sm { transform: rotate(2.5deg); }
 
-/* Pfeile «fliessen» weiter: Regel 1 – das Gespräch kann beliebig weitergehen */
+/* Regel 1: Pfeile «fliessen» weiter, das Gespräch kann beliebig weitergehen */
 .arrow .flow { opacity: 0; transition: opacity var(--dur-m) ease; }
 .arrow.is-flowing .flow { opacity: 1; animation: ta-flow 1.6s linear infinite; }
 @keyframes ta-flow { to { stroke-dashoffset: -28; } }

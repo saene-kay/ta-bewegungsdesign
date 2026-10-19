@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Design-Tokens – Farben, Typografie, Bewegung
+   Design-Tokens: Farben, Typografie, Bewegung
    Einzige Quelle für Werte. JS liest die Bewegungs-Tokens (--dur-*) hier aus.
    ========================================================================== */
 
@@ -16,12 +16,12 @@
   --letterbox: #0d141c;
 
   /* --- Ich-Zustände: jede Farbe hat genau eine Bedeutung --- */
-  --el: #b85a33;       /* Eltern-Ich – Flächen */
-  --el-ink: #a44e2a;   /* Eltern-Ich – Text, Antwort-Pfeile */
+  --el: #b85a33;       /* Eltern-Ich: Flächen */
+  --el-ink: #a44e2a;   /* Eltern-Ich: Text, Antwort-Pfeile */
   --er: #2c6a8c;       /* Erwachsenen-Ich */
   --er-tint: #e3eef3;
-  --k: #e4b04a;        /* Kind-Ich – Flächen */
-  --k-ink: #8a6414;    /* Kind-Ich – Text */
+  --k: #e4b04a;        /* Kind-Ich: Flächen */
+  --k-ink: #8a6414;    /* Kind-Ich: Text */
   --gold: #e4b04a;     /* Akzent auf dunklen Folien */
 
   /* --- Typografie --- */

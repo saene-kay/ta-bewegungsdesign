@@ -1,4 +1,4 @@
-# Bewegungskonzept – Kurzreferat Transaktionsanalyse
+# Bewegungskonzept: Kurzreferat Transaktionsanalyse
 
 SK1 Mitarbeiterführung · PVA 3 · 26.10.2026 · Einzelpräsentation, 10 Min., online (MS Teams)
 

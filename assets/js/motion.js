@@ -1,5 +1,5 @@
 /* ==========================================================================
-   motion.js – Bewegungsmodi, Akzente (data-fx) und Morph zwischen Folien
+   motion.js: Bewegungsmodi, Akzente (data-fx) und Morph zwischen Folien
    ========================================================================== */
 (function () {
   'use strict';
@@ -50,7 +50,7 @@
   // Akzente auf transform daher erst nach dem Eintritt starten (data-fx-delay).
   // ------------------------------------------------------------------------
   const FX = {
-    /** Ring breitet sich aus – «Botschaft kommt an». */
+    /** Ring breitet sich aus: «Botschaft kommt an». */
     pulse(el) {
       const ring = document.createElement('span');
       ring.className = 'fx-ring';
@@ -62,7 +62,7 @@
       a.finished.catch(() => {}).finally(() => ring.remove());
     },
 
-    /** Kurzes Schütteln – Gereiztheit. */
+    /** Kurzes Schütteln: Gereiztheit. */
     shake(el) {
       track(el.animate(
         [
@@ -77,7 +77,7 @@
       ));
     },
 
-    /** Daumen wackelt – Aufforderung zur Reaktion. */
+    /** Daumen wackelt: Aufforderung zur Reaktion. */
     wobble(el) {
       track(el.animate(
         [
@@ -112,7 +112,7 @@
       ));
     },
 
-    /** Funke am Kreuzungspunkt – gekreuzte Transaktion. */
+    /** Funke am Kreuzungspunkt: gekreuzte Transaktion. */
     spark(el) {
       [...el.children].forEach((ring, i) => {
         track(ring.animate(

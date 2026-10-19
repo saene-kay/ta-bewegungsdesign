@@ -1,4 +1,4 @@
-# Storyboard – Klick für Klick
+# Storyboard: Klick für Klick
 
 Zielzeit 9:00, Limit 10:00. Insgesamt **45 Klicks** in 10 Folien (Folie 11 «Quellen» wird übersprungen).
 Schritt 0 ist jeweils das, was beim Aufrufen der Folie von selbst erscheint.
@@ -18,7 +18,7 @@ Mit ✚ markierte Elemente sind neu. Sie stammen aus den Sprechernotizen und sin
 
 | Klick | Stichwort | Bewegung |
 |---|---|---|
-| 0 | – | Titel steigt auf |
+| 0 | (automatisch) | Titel steigt auf |
 | 1 | sachliche Stimme | Teamleiterin-Bubble gleitet von links ein |
 | 2 | gereizte Stimme | «… tippt»-Anzeige (0,9 s), dann poppt die Mitarbeiter-Bubble rechts auf und schüttelt sich |
 | 3 | «Reagiert kurz mit Daumen hoch …» | gelber Chip poppt auf, Daumen wackelt |
@@ -27,7 +27,7 @@ Mit ✚ markierte Elemente sind neu. Sie stammen aus den Sprechernotizen und sin
 
 | Klick | Stichwort | Bewegung |
 |---|---|---|
-| 0 | – | Titel |
+| 0 | (automatisch) | Titel |
 | 1 | Absicht | Block «Ziel» steigt auf |
 | 2 | Relevanz | Block «Warum für euch?» steigt auf |
 | 3 | Agenda | drei Punkte steigen gestaffelt auf, Trennlinien ziehen sich |
@@ -37,7 +37,7 @@ Mit ✚ markierte Elemente sind neu. Sie stammen aus den Sprechernotizen und sin
 
 | Klick | Stichwort | Bewegung |
 |---|---|---|
-| 0 | – | Kapitelleiste «1» aktiv, Titel |
+| 0 | (automatisch) | Kapitelleiste «1» aktiv, Titel |
 | 1 | Eltern-Ich = gelernt | EL-Kreis poppt, Texte gestaffelt |
 | 2 | Erwachsenen-Ich = gedacht | ER-Kreis poppt, Texte gestaffelt |
 | 3 | Kind-Ich = gefühlt | K-Kreis poppt, Texte gestaffelt |
@@ -72,7 +72,7 @@ Mit ✚ markierte Elemente sind neu. Sie stammen aus den Sprechernotizen und sin
 | 3 | Reaktion aus dem K | gestrichelter Pfeil K → EL, ✚ Zeile «Reaktion aus dem K: gekränkt oder trotzig» |
 | 4 | Regel 3 | soziale Ebene (Pfeil und Karte) tritt zurück, Regelkarte |
 
-## 8 · Wie antworte ich? (5:45–7:00) – Kamera-Moment
+## 8 · Wie antworte ich? Kamera-Moment (5:45–7:00)
 
 | Klick | Stichwort | Bewegung |
 |---|---|---|
